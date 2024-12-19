@@ -19,3 +19,30 @@ html
     color: #777
     font-size: 10px
     letter-spacing: 2px
+.title-first
+    color: $color-white
+    &__main
+        display: block
+        text-transform: uppercase
+        font-size: 5rem
+        letter-spacing: .7rem
+        line-height: 6rem
+        font-weight: 700
+        margin-bottom: 1rem
+        animation-name: leftToRight
+        animation-duration: 2s
+        animation-delay: $animation-delay
+        animation-timing-function: ease
+        animation-fill-mode: backwards
+    &__secondary
+        display: block
+        font-size: 4rem
+        line-height: 5rem
+        letter-spacing: .12rem
+        font-weight: 300
+        animation-name: rightToLeft
+        animation-duration: 2s
+        animation-delay: $animation-delay
+        animation-timing-function: ease
+        margin-bottom: 6rem
+        animation-fill-mode: backwards
