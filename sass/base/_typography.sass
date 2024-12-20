@@ -5,6 +5,11 @@
     font-style: normal
 @font-face
     font-family: 'roboto'
+    src: url("../fonts/Roboto-Medium.woff")
+    font-weight: 500
+    font-style: normal
+@font-face
+    font-family: 'roboto'
     src: url("../fonts/Roboto-Light.woff")
     font-weight: 300
     font-style: normal
@@ -45,4 +50,27 @@ html
         animation-delay: $animation-delay
         animation-timing-function: ease
         margin-bottom: 6rem
-        animation-fill-mode: backwards
+        backface-visibility: hidden
+.title-secondary
+    font-size: $font-size-paragraph-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light,0.7), rgba($color-brown-dark, 0.7))
+    background-clip: text
+    color: transparent
+    transition: all .5s
+    backface-visibility: hidden
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $box-shadow
+.title-third
+    text-transform: uppercase
+    font-weight: 500
+    font-size: $font-size-paragraph-h3
+    letter-spacing: 0.1rem
+.paragraph
+    font-weight: 400
+    font-size: $font-size-paragraph
+    line-height: 140%
+    letter-spacing: .12rem
