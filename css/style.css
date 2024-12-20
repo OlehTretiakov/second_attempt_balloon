@@ -154,6 +154,25 @@ html {
   margin-bottom: 1rem;
 }
 
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all 0.2s;
+}
+.adventure-card:hover {
+  transform: translateY(-1rem) scale(1.05);
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6.3rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7));
+  background-clip: text;
+  color: transparent;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -318,4 +337,12 @@ html {
 
 .section-about {
   padding-top: 8rem;
+  padding-bottom: 5.5rem;
+}
+
+.section-adventure {
+  padding-top: 22rem;
+  padding-bottom: 22rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), url(../img/section-adventure.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
 }/*# sourceMappingURL=style.css.map */
