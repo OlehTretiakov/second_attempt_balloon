@@ -61,6 +61,10 @@ html
     color: transparent
     transition: all .5s
     backface-visibility: hidden
+    position: relative
+    z-index: 10
+    &_white
+        color: $color-white
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1.1)
         text-shadow: $box-shadow
@@ -68,9 +72,9 @@ html
     text-transform: uppercase
     font-weight: 500
     font-size: $font-size-paragraph-h3
-    letter-spacing: 0.1rem
+    letter-spacing: 0.2rem
 .paragraph
     font-weight: 400
     font-size: $font-size-paragraph
     line-height: 140%
-    letter-spacing: .12rem
+    letter-spacing: .2rem

@@ -114,6 +114,11 @@ html {
   color: transparent;
   transition: all 0.5s;
   backface-visibility: hidden;
+  position: relative;
+  z-index: 10;
+}
+.title-secondary_white {
+  color: #fff;
 }
 .title-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -124,14 +129,14 @@ html {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
 }
 
 .paragraph {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 140%;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.2rem;
 }
 
 .text-align-center {
@@ -173,6 +178,29 @@ html {
   color: transparent;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.btn {
+  position: relative;
+  z-index: 10;
+}
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -180,7 +208,7 @@ html {
   color: #777777;
   position: relative;
   background-color: #fff;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 3rem;
   border-radius: 5rem;
   font-size: 2rem;
   font-weight: 400;
@@ -269,6 +297,155 @@ html {
   transform: scale(0.95);
 }
 
+.feedback-card {
+  clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 5rem 17rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+.feedback-card__img {
+  position: relative;
+  width: 17rem;
+  height: 17rem;
+  margin-right: 5rem;
+  background-color: green;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  overflow: hidden;
+}
+.feedback-card__img img {
+  transform: scale(1.15);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.feedback-card__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.feedback-card:hover .feedback-card__name {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.feedback-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(75%);
+}
+
+.card-tour {
+  height: 52rem;
+  perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 52rem;
+  width: 100%;
+  color: white;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.card-tour__side_front {
+  background-color: #fff;
+}
+.card-tour__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.99), rgba(161, 79, 3, 0.99));
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(-180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+.card-tour__img {
+  height: 24.5rem;
+  background: #ba8554;
+  background-blend-mode: hard-light;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  margin-bottom: 4.5rem;
+}
+.card-tour__img_1 {
+  background: url(../img/tour-1.jpg) center/cover no-repeat;
+}
+.card-tour__img_2 {
+  background: url(../img/tour-2.jpg) center/cover no-repeat;
+}
+.card-tour__img_3 {
+  background: url(../img/tour-3.jpg) center/cover no-repeat;
+}
+.card-tour__title {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 2.8rem;
+  text-align: right;
+  position: absolute;
+  top: 18rem;
+  right: 0;
+}
+.card-tour__span {
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.99), rgba(161, 79, 3, 0.99));
+  padding: 1rem 2rem;
+}
+.card-tour__span_2 {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+}
+.card-tour__descr ul {
+  text-align: center;
+  list-style: none;
+}
+.card-tour__descr ul li {
+  display: inline-block;
+  border-bottom: 1px solid #777777;
+  font-size: 1.6rem;
+  color: #777777;
+  letter-spacing: 0.2rem;
+}
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.card-tour__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  letter-spacing: 0.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 8.7rem;
+  text-align: center;
+}
+.card-tour__text_1 {
+  font-size: 1.6rem;
+}
+.card-tour__text_2 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
 .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
 }
@@ -345,4 +522,15 @@ html {
   padding-bottom: 22rem;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), url(../img/section-adventure.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+.section-tour {
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedback {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
