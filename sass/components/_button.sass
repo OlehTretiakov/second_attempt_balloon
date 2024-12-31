@@ -1,7 +1,8 @@
 .btn
     position: relative
     z-index: 10
-    &:link, &:visited
+    border: none
+    &, &:link, &:visited
         @include style-link($color-grey)
         position: relative
         background-color: $color-white
@@ -34,3 +35,10 @@
     &_animated
         animation: btnToUp 1s ease-out $animation-delay         
         animation-fill-mode: backwards
+.btn_brown
+    &, &:link, &:visited
+        background-color: $color-brown-light
+        color: $color-white
+    &:hover
+    &::after
+        background-color: $color-brown-light

@@ -1,0 +1,27 @@
+.footer
+    padding: 8rem
+    background-color: #333333
+    &__logo
+        width: 12rem
+    &__list
+        list-style: none
+        text-align: center
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 5rem
+    &__link
+        &:link, &:visited
+            display: inline-block
+            color: $color-grey
+            text-decoration: none
+            text-transform: uppercase
+            font-size: $font-size-paragraph
+            font-weight: 400
+            letter-spacing: .2rem
+            transition: all .5s
+        &:active
+        &:hover
+            transform: scale(1.1)
+            color: $color-brown-dark
+            

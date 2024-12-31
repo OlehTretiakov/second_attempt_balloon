@@ -200,8 +200,9 @@ html {
 .btn {
   position: relative;
   z-index: 10;
+  border: none;
 }
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -242,6 +243,14 @@ html {
 .btn_animated {
   animation: btnToUp 1s ease-out 0.7s;
   animation-fill-mode: backwards;
+}
+
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background-color: #ba8554;
+  color: #fff;
+}
+.btn_brown::after {
+  background-color: #ba8554;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -342,6 +351,98 @@ html {
 .feedback-card:hover img {
   transform: scale(1);
   filter: blur(0.3rem) brightness(75%);
+}
+
+.book {
+  height: 50rem;
+  background: linear-gradient(113deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 54%, rgba(186, 133, 84, 0.2) 54%, rgba(161, 79, 3, 0.2) 100%), url("../img/bg-form.jpg") center/cover no-repeat;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.form {
+  width: 75%;
+  padding: 6rem;
+  text-align-last: left;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 5rem;
+}
+.form__input {
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  padding: 1.8rem 0 1.8rem 2.2rem;
+  background: #fff;
+  border: none;
+  border-bottom: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  width: 50%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.3rem solid #66d763;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:invalid {
+  border-bottom-color: #d76363;
+}
+.form__label {
+  padding-left: 1.6rem;
+  display: block;
+  font-size: 1.6rem;
+  color: #777777;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+}
+.form__group-radio {
+  width: 30%;
+  display: inline-block;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  font-size: 1.4rem;
+  padding-left: 4rem;
+}
+.form__button-radio {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.7rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #ba8554;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #ba8554;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
 
 .card-tour {
@@ -512,6 +613,38 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.footer {
+  padding: 8rem;
+  background-color: #333333;
+}
+.footer__logo {
+  width: 12rem;
+}
+.footer__list {
+  list-style: none;
+  text-align: center;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__link:link, .footer__link:visited {
+  display: inline-block;
+  color: #777777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  transition: all 0.5s;
+}
+.footer__link:hover {
+  transform: scale(1.1);
+  color: #a14f03;
+}
+
 .section-about {
   padding-top: 8rem;
   padding-bottom: 5.5rem;
@@ -533,4 +666,9 @@ html {
   padding-top: 8rem;
   padding-bottom: 8rem;
   position: relative;
+}
+
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7));
 }/*# sourceMappingURL=style.css.map */
